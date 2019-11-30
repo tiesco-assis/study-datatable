@@ -1,0 +1,6 @@
+*, *:before, *:after{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.sorting_1{font-size: 0.9em; color: #555; font-weight: 700;}
+td{font-size: 0.9em; color: #555; font-weight: 300;}
