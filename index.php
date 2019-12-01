@@ -3,7 +3,7 @@
 
 <head>
     <meta charset='utf-8'>
-    <title>Exemplo datatable</title>
+    <title>Consulta via PHP OO e PDO com DataTable</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' href='https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css'>
     <link rel='stylesheet' type='text/css' href='css/bootcss.css'>
@@ -27,7 +27,7 @@
 </head>
 
 <body>
-    <h1>DataTable</h1>
+    <h1>Consulta via PHP OO e PDO com DataTable</h1>
 
     <table id="lista-usuario" class="display" style="width:100%">
         <thead>

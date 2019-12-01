@@ -2,7 +2,6 @@
 require 'appConfig.php';
 
 $dbTable = 'usuarios';
-
 $Read = new Read;
 
 /** Recebe a requisição da pesquisa */
@@ -39,27 +38,6 @@ foreach ($Read->getResult() as $rowData) {
     $dados[] = $dado;
     
 }
-
-/*$resultDatabase = $Read->getResult();
-$rowData = mysqli_fetch_array($resultDatabase, MYSQLI_ASSOC);
-while($rowData):
-    $dado = array();
-    $dado[] = $rowData["nome"];
-    $dado[] = $rowData["salario"];
-    $dado[] = $rowData["idade"];
-
-    $dados[] = $dado;
-endwhile;*/
-
-/*while($rowData = mysqli_fetch_array($Read->getResult())):
-    $dado = array();
-    $dado[] = $rowData["nome"];
-    $dado[] = $rowData["salario"];
-    $dado[] = $rowData["idade"];
-
-    $dados[] = $dado;
-endwhile;*/
-
 /** Cria o array de informações a serem retornados para o Javascript */
 $json_data = array(
     "draw" => intval($requestData['draw']), //para cada requisição é enviado um número como parâmetro
@@ -67,5 +45,4 @@ $json_data = array(
     "recordsFiltered" => intval($totalFiltered), //Total de registro quando houver pesquisa
     "data" => $dados //Array de dados completo dos dados retornados da tabela
 );
-
 echo json_encode($json_data); //envia dados como formato json
